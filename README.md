@@ -5,7 +5,15 @@
 
 2. Add/Delete Post
    <br>
-   ![Screenshot 1](./images/tech-blog-usage.gif)
+   ![Usage of App](./images/tech-blog-usage.gif)
+
+3. Screenshot of Blog
+   <br>
+   ![Screenshot 1](./images/screenshot1.PNG)
+
+4. Screenshot of Dashboard Page
+   <br>
+   ![Screenshot 2](./images/screenshot2.PNG)
 
 # Technologies Used
 
