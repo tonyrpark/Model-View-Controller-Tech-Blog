@@ -1,7 +1,7 @@
 {
   "name": "mvc-tech-blog",
   "version": "1.0.0",
-  "description": "Model-View-Controller (MVC) Tech Blog",
+  "description": "MVC Tech Blog",
   "main": "server.js",
   "scripts": {
     "test": "jest",
@@ -11,14 +11,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/priyaravi23/mvc-tech-blog.git"
+    "url": "git+https://github.com/tonyrpark/Model-View-Controller-Tech.git"
   },
-  "author": "Priya Ravi",
+  "author": "Tony Park",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/priyaravi23/mvc-tech-blog/issues"
-  },
-  "homepage": "https://github.com/priyaravi23/mvc-tech-blog#readme",
   "dependencies": {
     "bcrypt": "^5.0.0",
     "bulma": "^0.9.0",
