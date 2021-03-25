@@ -1,40 +1,30 @@
-const { Model, DataTypes } = require("sequelize");
-const sequelize = require("../config/connection");
+const User = require('./User');
+const Post = require('./Post');
+const Comment = require('./Comment');
 
-// create our Post model
-class Post extends Model {}
+//create associations
+User.hasMany(Post, {
+    foreignKey: 'user_id'
+});
 
-// Fields/columns for Model (made by sequelize)
-Post.init(
-  {
-    id: {
-      type: DataTypes.INTEGER,
-      allowNull: false,
-      primaryKey: true,
-      autoIncrement: true,
-    },
-    title: {
-      type: DataTypes.STRING,
-      allowNull: false,
-    },
-    content: {
-      type: DataTypes.TEXT,
-      allowNull: false,
-    },
-    user_id: {
-      type: DataTypes.INTEGER,
-      references: {
-        model: "user",
-        key: "id",
-      },
-    },
-  },
-  {
-    sequelize,
-    freezeTableName: true,
-    underscored: true,
-    modelName: "post",
-  }
-);
+Post.belongsTo(User, {
+    foreignKey: 'user_id',
+});
 
-module.exports = Post;
+Comment.belongsTo(User, {
+    foreignKey: 'user_id'
+  });
+  
+Comment.belongsTo(Post, {
+    foreignKey: 'post_id'
+});
+  
+User.hasMany(Comment, {
+    foreignKey: 'user_id'
+});
+  
+Post.hasMany(Comment, {
+    foreignKey: 'post_id'
+});
+
+module.exports = {User, Post, Comment};

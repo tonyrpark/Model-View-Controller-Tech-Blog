@@ -1,16 +1,19 @@
+<!-- displaying articles -->
 {{> post-info post}}
 
+<!-- displaying form and comments-->
+<!-- only display if logged in -->
 {{#if loggedIn}}
-<div class="card">
-    <h3 class="card-header"></h3>
-    <form class="card-body comment-form" id="comment-form">
+<form class="comment-form">
+  <div>
+    <textarea class="ml-5" name="comment-body"></textarea>
+  </div>
 
-        <label class="form-label">Comment</label>
-        <input id="comment" name="comment-body" class="form-input" />
+  <div>
+    <button class="button is-warning ml-5 mb-5" type="submit">Add Comment</button>
+  </div>
 
-        <button type="submit" class="btn">Submit</button>
-    </form>
-</div>
+</form>
 {{/if}}
 
 {{> comments post.comments}}
